@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function MainPage() {
   const [products, setProducts] = React.useState([]);
@@ -23,21 +24,25 @@ function MainPage() {
     <div>
       <div id="header">
         <div id="header-area">
-          <img src="images/icons/logo.png" />
+          <img src="images/icons/logo.png" alt="iconlogo" />
         </div>
       </div>
       <div id="body">
         <div id="banner">
-          <img src="images/banners/banner1.png" />
+          <img src="images/banners/banner1.png" alt="banner1" />
         </div>
         <h1>판매되는 상품들</h1>
         <div id="product-list">
-          {true &&
-            products.map(function (product, index) {
-              return (
-                <div className="product-card">
+          {products.map(function (product, index) {
+            return (
+              <div className="product-card" key={index}>
+                <Link className="product-link" to={`/products/${index}`}>
                   <div>
-                    <img className="product-img" src={product.imageUrl} />
+                    <img
+                      className="product-img"
+                      src={product.imageUrl}
+                      alt="product"
+                    />
                   </div>
                   <div className="product-contents">
                     <span className="product-name">{product.name}</span>
@@ -46,16 +51,18 @@ function MainPage() {
                       <img
                         className="product-avatar"
                         src="images/icons/avatar.png"
-                      ></img>
+                        alt="avator"
+                      />
                       <span>{product.seller}</span>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </div>
-      <div id="footer"></div>d
+      <div id="footer"></div>
     </div>
   );
 }
