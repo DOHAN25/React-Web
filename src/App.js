@@ -1,10 +1,14 @@
+import "antd/dist/antd.min.css";
 import "./App.css";
 import MainPage from "./main";
-import { Routes, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, useHistory } from "react-router-dom";
 import UploadPage from "./upload";
 import ProductPage from "./product";
+import { Button } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
 
 function App() {
+  const history = useHistory();
   return (
     <div>
       <div id="header">
@@ -12,14 +16,29 @@ function App() {
           <Link to="/">
             <img src="/images/icons/logo.png" alt="iconlogo" />
           </Link>
+          <Button
+            size="large"
+            onClick={function () {
+              history.push("/upload");
+            }}
+            icon={<DownloadOutlined />}
+          >
+            상품 업로드
+          </Button>
         </div>
       </div>
       <div id="body">
-        <Routes>
-          <Route path={"/"} element={<MainPage />}></Route>
-          <Route path="/products/:id" element={<ProductPage />}></Route>
-          <Route path="/upload" element={<UploadPage />}></Route>
-        </Routes>
+        <Switch>
+          <Route path={"/"} exact={true}>
+            <MainPage />
+          </Route>
+          <Route path="/products/:id" exact={true}>
+            <ProductPage />
+          </Route>
+          <Route path="/upload" exact={true}>
+            <UploadPage />
+          </Route>
+        </Switch>
       </div>
       <div id="footer"></div>
     </div>
