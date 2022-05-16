@@ -1,3 +1,7 @@
+#upload-container {
+  padding-top: 36px;
+}
+
 #upload-img-placeholder {
   width: 200px;
   height: 200px;
@@ -16,6 +20,26 @@
 }
 
 #upload-img-placeholder > span {
-  fonts-size: 14px;
+  font-size: 14px;
   color: rgb(195, 194, 204);
+}
+
+.upload-name {
+  width: 200px;
+}
+.upload-label {
+  font-size: 18px;
+  width: 80px;
+}
+
+#product-description {
+  height: 150px;
+}
+
+#submit-button {
+  float: right; /*부모를 기준으로 오른쪽으로 넘길 수 있다.*/
+  background-color: rgb(30, 120, 255);
+  color: white;
+  border: none;
+  margin-top: 16px;
 }
