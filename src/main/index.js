@@ -52,7 +52,9 @@ function MainPage() {
                       />
                       <span>{product.seller}</span>
                     </div>
-                    <span>{dayjs(product.createdAt).fromNow()}</span>
+                    <span className="product-date">
+                      {dayjs(product.createdAt).fromNow()}
+                    </span>
                   </div>
                 </div>
               </Link>

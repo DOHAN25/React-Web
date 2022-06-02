@@ -1,4 +1,4 @@
-import { Form, Divider, Input, InputNumber, Button } from "antd";
+import { Form, Divider, Input, InputNumber, Button, Upload } from "antd";
 import "./index.css";
 
 function UploadPage() {
