@@ -36,7 +36,7 @@ function MainPage() {
                 <div>
                   <img
                     className="product-img"
-                    src={product.imageUrl}
+                    src={`${API_URL}product.imageUrl`}
                     alt="product"
                   />
                 </div>
