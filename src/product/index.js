@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { API_URL } from "../config/constants";
-
+import dayjs from "dayjs";
 function ProductPage() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -25,7 +25,7 @@ function ProductPage() {
   return (
     <div>
       <div id="image-box">
-        <img src={"/" + product.imageUrl} />
+        <img src={`${API_URL}/${product.imageUrl}`} />
       </div>
       <div id="profile-box">
         <img src="/images/icons/avatar.png" />
@@ -34,8 +34,11 @@ function ProductPage() {
       <div id="contents-box">
         <div id="name">{product.name}</div>
         <div id="price">{product.price}원</div>
-        <div id="createdAt">2022년 5월 15일</div>
-        <div id="description">{product.description}</div>
+        <div id="createdAt">
+          {dayjs(product.createdAt).format("YYYY년 MM월 DD일")}
+        </div>
+        {/*div 태그 사용하면 줄바꿈 적용안된다. 그래서 pre 태그로 변경함*/}
+        <pre id="description">{product.description}</pre>
       </div>
     </div>
   );
