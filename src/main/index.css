@@ -25,6 +25,7 @@
   border: 1px solid black;
   border-radius: 12px;
   overflow: hidden;
+  position: relative;
 }
 
 .product-img {
@@ -77,4 +78,14 @@
 
 #product-headline {
   margin-top: 8px;
+}
+
+.product-blur {
+  position: absolute; /* 자기 옆에 있는 태그들 상관 없이 부모만 바라본다.*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffffaa;
+  pointer-events: none;
 }

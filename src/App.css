@@ -33,7 +33,8 @@ body,
 
 #body {
   height: 100vh;
-  width: 1024px;
+  max-width: 1024px; /*반응형 웹*/
+  width: 100%;
   /* 부모로부터 가운데 정렬 */
   margin: 0 auto;
   padding-bottom: 24px;
