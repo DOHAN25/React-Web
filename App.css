@@ -32,7 +32,7 @@ body,
 }
 
 #body {
-  min-height: 100vh;
+  min-height: 100vh; /*자식이 커지면 부모도 커지게 만들기 위해*/
   width: 1024px;
   /* 부모로부터 가운데 정렬 */
   margin: 0 auto;
@@ -43,4 +43,19 @@ body,
   height: 200px;
   background-color: rgb(230, 230, 230);
   margin-top: 16px;
+}
+
+@media screen and (max-width: 400px) {
+  .product-card {
+    width: 160px !important; /*important는 사용하지 않는 것이 좋다.*/
+  }
+  #header {
+    padding: 0 8px;
+  }
+  # body {
+    padiing: 0 8px;
+  }
+  .ant-caroursel {
+    margin: 0 -8px;
+  }
 }
