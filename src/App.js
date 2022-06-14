@@ -4,8 +4,8 @@ import MainPage from "./main";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import UploadPage from "./upload";
 import ProductPage from "./product";
-import { Button } from "antd";
-import { DownloadOutlined } from "@ant-design/icons";
+import { Button, Avatar } from "antd";
+import { DownloadOutlined, UserOutlined } from "@ant-design/icons";
 
 function App() {
   const history = useHistory();
@@ -25,6 +25,7 @@ function App() {
           >
             상품 업로드
           </Button>
+          <Avatar icon={<UserOutlined />} />
         </div>
       </div>
       <div id="body">
