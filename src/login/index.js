@@ -6,7 +6,14 @@ function loginPage() {
   return (
     <div id="login-container">
       <div id="avatar-box">
-        <Avatar size={64} icon={<UserOutlined />} />
+        <Avatar
+          size={64}
+          icon={<UserOutlined />}
+          onClick={function () {
+            history.push("/login");
+          }}
+          style={{ cursor: "pointer" }}
+        />
       </div>
     </div>
   );
