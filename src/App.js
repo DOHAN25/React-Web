@@ -4,6 +4,7 @@ import MainPage from "./main";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import UploadPage from "./upload";
 import ProductPage from "./product";
+import LoginPage from "./login";
 import { Button, Avatar } from "antd";
 import { DownloadOutlined, UserOutlined } from "@ant-design/icons";
 
@@ -16,16 +17,26 @@ function App() {
           <Link to="/">
             <img src="/images/icons/logo.png" alt="iconlogo" />
           </Link>
-          <Button
-            size="large"
-            onClick={function () {
-              history.push("/upload");
-            }}
-            icon={<DownloadOutlined />}
-          >
-            상품 업로드
-          </Button>
-          <Avatar icon={<UserOutlined />} />
+          <div id="button-area">
+            <Button
+              size="large"
+              onClick={function () {
+                history.push("/upload");
+              }}
+              icon={<DownloadOutlined />}
+            >
+              상품 업로드
+            </Button>
+            <Button
+              size="large"
+              onClick={function () {
+                history.push("/login");
+              }}
+              icon={<UserOutlined />}
+            >
+              로그인
+            </Button>
+          </div>
         </div>
       </div>
       <div id="body">
@@ -38,6 +49,9 @@ function App() {
           </Route>
           <Route path="/upload" exact={true}>
             <UploadPage />
+          </Route>
+          <Route path="/login" exact={true}>
+            <LoginPage />
           </Route>
         </Switch>
       </div>

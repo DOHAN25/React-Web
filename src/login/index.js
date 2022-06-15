@@ -1,22 +1,13 @@
 import "./index.css";
-import { Avatar } from "antd";
+import { Avatar, Form } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
-function loginPage() {
+function LoginPage() {
   return (
     <div id="login-container">
-      <div id="avatar-box">
-        <Avatar
-          size={64}
-          icon={<UserOutlined />}
-          onClick={function () {
-            history.push("/login");
-          }}
-          style={{ cursor: "pointer" }}
-        />
-      </div>
+      <Form></Form>
     </div>
   );
 }
 
-export default loginPage;
+export default LoginPage;

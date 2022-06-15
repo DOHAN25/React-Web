@@ -18,7 +18,9 @@ body,
   align-items: center;
   justify-content: space-between; /*자식들을 양 끝으로 배치*/
 }
-
+#header-area > Button {
+  flex-direction: row-reverse;
+}
 #header-area img {
   width: 128px;
   height: 36px;
@@ -44,4 +46,8 @@ body,
   height: 200px;
   background-color: rgb(230, 230, 230);
   margin-top: 16px;
+}
+
+#button-area {
+  display: inline-flex;
 }
