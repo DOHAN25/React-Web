@@ -1,3 +1,10 @@
 #login-container {
   padding-top: 36px;
 }
+
+#Form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
