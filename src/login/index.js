@@ -57,7 +57,7 @@ function LoginPage() {
               로그인
             </Button>
             <Link to="./regist">
-              <Button type="primary">회원가입</Button>
+              <Button type="primary">회원가입하기/Button>
             </Link>
           </Form.Item>
         </Form>
