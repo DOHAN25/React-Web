@@ -5,7 +5,7 @@ import { Switch, Route, Link, useHistory } from "react-router-dom";
 import UploadPage from "./upload";
 import ProductPage from "./product";
 import LoginPage from "./login";
-import RegistPage from "./regist";
+import SignUpPage from "./login/signup.js";
 import { Button, Avatar } from "antd";
 import { DownloadOutlined, UserOutlined } from "@ant-design/icons";
 
@@ -54,8 +54,8 @@ function App() {
           <Route path="/login" exact={true}>
             <LoginPage />
           </Route>
-          <Route path="/regist" exact={true}>
-            <RegistPage />
+          <Route path="/signup.js" exact={true}>
+            <SignUpPage />
           </Route>
         </Switch>
       </div>
